@@ -1,0 +1,24 @@
+int main() {
+    int numero;
+    int n;
+    int elevacao;
+    int num;
+
+    printf("Informe um numero: ");
+    scanf("%i", &numero);
+
+    printf("Informe a elevacao: ");
+    scanf("%i", &elevacao);
+
+    n = 1;
+    num = numero;
+
+    while (n < elevacao) {
+        num = num * numero;
+        n = n + 1;
+    }
+
+    printf("%i^%i = %i", numero, elevacao, num);
+
+    return 0;
+}
