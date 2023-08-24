@@ -1,0 +1,45 @@
+import math
+
+print("Escolha a forma de calcular:\n[01] Soma\n[02] Subtracao\n[03] Divisao\n[04] Multiplicacao\n[05] Fatorial\n[06] Porcentagem\n[07] Logaritmos")
+
+escolha = input("Digite o numero da operacao escolhida: ")
+
+if escolha == "01":
+    valor1 = float(input("Digite o primeiro valor para somar: "))
+    valor2 = float(input("Digite o segundo valor: "))
+    print("Resultado da soma:", valor1 + valor2)
+    
+elif escolha == "02":
+    valor1 = float(input("Digite o primeiro valor para subtrair: "))
+    valor2 = float(input("Digite o segundo valor: "))
+    print("Resultado da subtracao:", valor1 - valor2)
+    
+elif escolha == "03":
+    valor1 = float(input("Digite o dividendo: "))
+    valor2 = float(input("Digite o divisor: "))
+    print("Resultado da divisao:", valor1 / valor2)
+    
+elif escolha == "04":
+    valor1 = float(input("Digite o primeiro valor para multiplicar: "))
+    valor2 = float(input("Digite o segundo valor: "))
+    print("Resultado da multiplicacao:", valor1 * valor2)
+    
+elif escolha == "05":
+    valor1 = int(input("Digite o valor para calcular o fatorial: "))
+    resposta = math.factorial(valor1)
+    print("Fatorial:", resposta)
+    
+elif escolha == "06":
+    valor1 = float(input("Digite o valor base: "))
+    valor2 = float(input("Digite a porcentagem: "))
+    resposta = valor1 * (valor2 / 100)
+    print("Resultado da porcentagem:", resposta)
+    
+elif escolha == "07":
+    valor1 = float(input("Digite o valor para calcular o logaritmo: "))
+    resposta = math.log10(valor1)
+    print("Logaritmo:", resposta)
+    
+else:
+    print("Escolha invalida. Por favor, escolha um numero de 01 a 07.")
+
