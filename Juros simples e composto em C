@@ -1,0 +1,43 @@
+#include <stdio.h>
+
+int main() {
+    int esc;
+    float juros_simples, juros_composto, m, j, c, i, t;
+     
+     while(esc !=3){
+    
+    printf("1 - Juros simples\n2 - Juros composto\n3 - Sair\n");
+    scanf("%d", &esc);
+    
+    if (esc == 1) {
+        printf("Digite o valor de C: ");
+        scanf("%f", &c);
+        printf("Digite a taxa de juros (em percentual): ");
+        scanf("%f", &i);
+        i = i / 100.0;
+        printf("Digite o tempo (em anos): ");
+        scanf("%f", &t);
+        
+        juros_simples = c * i * t;
+        printf("O juros é igual a: %.2f\n", juros_simples);
+    } else if (esc == 2) {
+        printf("Digite o valor de C: ");
+        scanf("%f", &c);
+        printf("Digite a taxa de juros (em percentual): ");
+        scanf("%f", &i);
+        i = i / 100.0;
+        printf("Digite o tempo (em anos): ");
+        scanf("%f", &t);
+        
+        juros_composto = c * (pow(1 + i, t) - 1);
+        m = c + juros_composto;
+        printf("O montante é igual a: %.2f\n", m);
+    } else if (esc == 3) {
+        printf("Encerrando o programa.\n");
+    } else {
+        printf("Opção inválida.\n");
+    }
+     }
+    return 0;
+}
+
