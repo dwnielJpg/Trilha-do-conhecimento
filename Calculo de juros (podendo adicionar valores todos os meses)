@@ -1,0 +1,52 @@
+condicao = "01"  # Inicializa a variável de condição
+
+print("Escolha uma das opções abaixo: ")
+escolha = input("[01] Simples\n[02] Composto\n")
+
+if escolha == "01":
+    C = float(input("Digite o valor do C: "))
+    I = float(input("Digite o valor do I: "))
+    T = float(input("Digite o valor do T: "))
+    I = I / 100
+    J = C * I * T
+    M = J + C  # Calcula o montante
+    print("Resultado é:", M)
+
+    while condicao == "01":
+        print("Deseja adicionar dividendos em cima do inicial: ")
+        condicao = input("[01] Sim\n[02] Não\n")
+
+        if condicao == "01":
+            C_adicional = float(input("Digite o valor do C a ser adicionado: "))
+            M = M + C_adicional * I * T
+            M = C_adicional + M
+            print("Novo montante é:", M)  # Imprime o montante atualizado
+
+        elif condicao == "02":
+            print("Encerrando o programa.")
+        else:
+            print("Escolha inválida.")
+
+elif escolha == "02":
+    C = float(input("Digite o valor do C: "))
+    I = float(input("Digite o valor do I: "))
+    T = float(input("Digite o valor do T: "))
+    I = I / 100
+    M = C * (1 + I) ** T
+    print("Resultado é:", M)
+
+    while condicao == "01":
+        print("Deseja adicionar dividendos em cima do inicial: ")
+        condicao = input("[01] Sim\n[02] Não\n")
+
+        if condicao == "01":
+            C_adicional = float(input("Digite o valor do C a ser adicionado: "))
+            M = M + C_adicional * (1 + I) ** T
+            print("Novo montante é:", M)  # Imprime o montante atualizado
+
+        elif condicao == "02":
+            print("Encerrando o programa.")
+        else:
+            print("Escolha inválida.")
+else:
+    print("Escolha inválida.")
