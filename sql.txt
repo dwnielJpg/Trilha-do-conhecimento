@@ -1,0 +1,1 @@
+INSERT INTO Pessoa (ID, Nome, Idade, Email) VALUES (123, 'caosdo', 412, 'aijoid@gmail.com');
